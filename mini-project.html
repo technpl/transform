@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Properties Showcase</title>
+   
+     <style>
+      body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.transform-container {
+  height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #34495e;
+    perspective: 500px;
+}
+
+.child {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.child {
+    border:2px solid red;
+}
+
+
+.translate:hover {
+    background-color: #3498db;
+    transform: translateZ(100px);
+}
+
+.rotate:hover {
+    background-color: #e74c3c;
+    transform: rotate(15deg);
+}
+
+.scale:hover {
+    background-color: #2ecc71;
+    transform: scale(1.2);
+}
+
+.skew:hover {
+    background-color: #f39c12;
+    transform: skew(20deg, 10deg);
+}
+
+.matrix:hover {
+    background-color: #9b59b6;
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+
+.combined:hover {
+    background-color: #1abc9c;
+    transform: rotate(10deg) scale(0.9) translateX(10px);
+}
+
+.transform-origin:hover {
+    background-color: #d35400;
+    transform: rotate(30deg);
+    transform-origin: top left;
+}
+
+.rotate3d:hover {
+    background-color: #34495e;
+    transform: rotate3d(1, 1, 0, 45deg);
+}
+     </style>
+</head>
+<body>
+    <h1>CSS Transform Properties <u><i><b>technpl</b></i></u></h1>
+    <div class="transform-container">
+        <div class="child translate">Translate</div>
+        <div class="child rotate">Rotate</div>
+        <div class="child scale">Scale</div>
+        <div class="child skew">Skew</div>
+        <div class="child matrix">Matrix</div>
+        <div class="child combined">Combined</div>
+        <div class="child transform-origin">Origin</div>
+        <div class="child rotate3d">3D Rotate</div>
+    </div>
+</body>
+</html>
